@@ -162,6 +162,8 @@ nav span {
 	padding-left: 46px;
 	transition: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 250ms;
+	display: flex;
+	align-items: center;
 }
 
 .contact:hover,
@@ -226,7 +228,6 @@ nav span {
 }
 .antenna {
 	margin-bottom: 30px;
-	margin-left: -15px;
 }
 
 h2 {
@@ -242,6 +243,7 @@ h2 {
 	line-height: 16px;
 	letter-spacing: 0, 03em;
 	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 .article {
 	color: var(--main-grey);
@@ -255,12 +257,12 @@ h2 {
 	list-style: none;
 	gap: 30px;
 	padding-top: 50px;
-	padding-bottom: 94px;
 }
 
 .label {
 	position: relative;
 	bottom: 75px;
+	font-weight: 700;
 	background: rgba(47, 48, 58, 0.8);
 	color: var(--main-white);
 	text-transform: uppercase;
@@ -278,7 +280,6 @@ h2 {
 	display: flex;
 	gap: 30px;
 	list-style: none;
-	padding-bottom: 94px;
 	text-align: center;
 	padding-top: 50px;
 }
@@ -330,7 +331,6 @@ h2 {
 	list-style: none;
 	display: flex;
 	padding-top: 50px;
-	padding-bottom: 94px;
 	gap: 30px;
 }
 
@@ -574,7 +574,7 @@ footer span {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(33, 150, 243, 0.9);
-	transform: translateY(100%);
+	transform: translateY(calc(100% + 1px));
 	transition-property: transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -585,7 +585,6 @@ footer span {
 }
 
 .cards-overlay p {
-	font-weight: 400px;
 	font-size: 18px;
 	line-height: 156%;
 	letter-spacing: 0.03em;
@@ -633,6 +632,9 @@ footer span {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .is-hidden {
@@ -658,6 +660,11 @@ footer span {
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
+	color: var(--main-grey);
+}
+
+.modal h3 {
+	padding-bottom: 12px;
 }
 
 .input-modal {
@@ -766,7 +773,7 @@ footer span {
 }
 
 .checkbox:checked + .form-icon-check {
-	background-color: var(--main-blue);
-	border-color: var(--main-blue);
 	opacity: 1;
+	fill: #2196f3;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
